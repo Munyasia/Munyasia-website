@@ -18,6 +18,7 @@ export type Project = {
   year: string;
   stack: string[];
   description: string;
+  outcome: string;
   highlights: string[];
   featured: boolean;
   image: string;
@@ -27,6 +28,23 @@ export type Project = {
 export type SkillGroup = {
   category: string;
   items: string[];
+};
+
+export type Pillar = {
+  index: string;
+  title: string;
+  body: string;
+};
+
+export type Home = {
+  heroHeading: string[];
+  heroEmphasis: string;
+  heroSubline: string;
+  scrollHint: string;
+  pillars: Pillar[];
+  ctaHeading: string;
+  ctaEmphasis: string;
+  ctaBody: string;
 };
 
 export const personal: Personal = {
@@ -58,6 +76,8 @@ export const projects: Project[] = [
     ],
     description:
       "Production e-commerce platform built for the Kenyan market, with a full order pipeline from catalog to checkout to seller fulfillment.",
+    outcome:
+      "Revenue infrastructure for a Kenyan business: full online checkout, secure payments, found on Google.",
     highlights: [
       "REST APIs for cart, checkout, catalog, and orders",
       "Google OAuth with JWT sessions and account lockout",
@@ -85,6 +105,8 @@ export const projects: Project[] = [
     ],
     description:
       "AI platform that categorizes academic documents automatically, turning unsorted PDFs and DOCX files into a searchable, organized library.",
+    outcome:
+      "Cut document sorting time by ~90%, putting learning material one search away for students.",
     highlights: [
       "OCR ingestion of PDF and DOCX files",
       "Automated categorization and semantic search via Gemini and LangChain",
@@ -110,6 +132,8 @@ export const projects: Project[] = [
     ],
     description:
       "AI-powered job application tracker that reads a Gmail inbox and surfaces status updates without exposing full email content to any model.",
+    outcome:
+      "AI email triage engineered to near-zero cost: only 1-3 of ~50 daily emails ever reach the model.",
     highlights: [
       "Three-layer email funnel sends only 1-3 of ~50 daily emails to the LLM, near-zero AI cost",
       "Strict data minimization: sender, subject, and truncated snippet only",
@@ -127,6 +151,8 @@ export const projects: Project[] = [
     stack: ["Next.js 15", "React 19", "Tailwind v4", "Motion", "nuqs"],
     description:
       "Travel and safari platform front end designed to showcase destinations and convert browsing into inquiries.",
+    outcome:
+      "A safari brand's browsing experience rebuilt to turn visitors into inquiries.",
     highlights: [
       "Mega-menu navigation",
       "Auto-scrolling destination carousels",
@@ -146,6 +172,8 @@ export const projects: Project[] = [
     stack: ["Next.js 15", "React 19", "Tailwind v4", "Motion", "nuqs"],
     description:
       "Portfolio site for the Maahir Graphics design business, built as a responsive, motion-enhanced showcase of client work.",
+    outcome:
+      "A design studio's client work given a portfolio worth linking to.",
     highlights: [
       "Responsive component-driven build",
       "Motion-enhanced UI",
@@ -162,6 +190,8 @@ export const projects: Project[] = [
     stack: ["HTML5", "CSS", "JavaScript", "PostgreSQL", "Firestore"],
     description:
       "Corporate website for an insurance agency, backed by a hybrid database setup for business records and client engagement.",
+    outcome:
+      "A corporate front end backed by real infrastructure for records and client engagement.",
     highlights: [
       "Hybrid PostgreSQL and Firestore backend for business records and client engagement",
     ],
@@ -213,4 +243,34 @@ export const about = {
     "Builds with a secure-by-design mindset, shaped by TryHackMe, CyberDefenders blue team exercises, ISC2 candidacy, and the Moringa bootcamp.",
     "Brings leadership experience through GDSC and leading a student tech work group.",
   ],
+};
+
+export const home: Home = {
+  heroHeading: [
+    "I help businesses launch secure web apps and AI tools that actually get customers.",
+  ],
+  heroEmphasis: "get customers",
+  heroSubline: "Let's take your product from an idea to shipped code.",
+  scrollHint: "Scroll",
+  pillars: [
+    {
+      index: "A",
+      title: "Ship products that generate revenue",
+      body: "E-commerce, payments and SEO engineered so customers find you and buy. From catalog to checkout to the payment webhook, built to convert and built to be found.",
+    },
+    {
+      index: "B",
+      title: "Automate with AI, without burning money",
+      body: "AI that pays for itself: pipelines designed for cost-awareness, sending only what matters to the model. Automation that saves hours of manual work, with strict data minimization by default.",
+    },
+    {
+      index: "C",
+      title: "Security from day one",
+      body: "Authentication, verified payments, protected data. Systems built by someone trained in how attackers think, so problems are prevented instead of patched.",
+    },
+  ],
+  ctaHeading: "Have a problem worth solving?",
+  ctaEmphasis: "solving",
+  ctaBody:
+    "I design, build and secure web products end to end. Tell me what is slowing your business down.",
 };

@@ -53,7 +53,7 @@ export function ProjectCard({ project }: { project: Project }) {
           {stack.map((item) => (
             <li
               key={item}
-              className="label rounded-none border border-border px-2.5 py-0.5"
+              className="label rounded-[3px] border border-border px-2.5 py-0.5"
             >
               {item}
             </li>
