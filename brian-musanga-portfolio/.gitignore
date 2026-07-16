@@ -50,4 +50,5 @@ CLAUDE.md
 .claude.json
 AGENTS.md
 .mcp.json
+.impeccable/
 *.md
